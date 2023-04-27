@@ -1,8 +1,6 @@
 def example1() {
   println 'Hello from example1'
-    step{
-      shell('ls -lrt')
-    }
+  def proc = "ls -lrt".execute()
 }
 
 def example2() {
