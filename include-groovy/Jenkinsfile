@@ -1,20 +1,20 @@
 def code
 
 pipeline {
+    node {
+        def code1 = load 'example.groovy'
+        code1.example1()
+    }
     agent any
     stages {
         stage('Load'){
             steps {
-                script {
-                    code = load 'example.groovy'
-                }
+                sh 'not working'
             }
         }
         stage('Execute'){
             steps {
-                script {
-                    code.example1()
-                }
+                 sh 'not working'
             }
         }
     }
