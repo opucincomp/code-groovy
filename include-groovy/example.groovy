@@ -1,7 +1,7 @@
 def example1() {
   println 'Hello from example1'
   job("test"){
-    steps{
+    step{
       shell('ls -lrt')
     }
   }
