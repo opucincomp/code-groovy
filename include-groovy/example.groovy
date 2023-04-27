@@ -1,6 +1,5 @@
 def example1() {
   println 'Hello from example1'
-  def proc = "ls -lrt".execute()
 }
 
 def example2() {

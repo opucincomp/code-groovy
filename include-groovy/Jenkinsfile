@@ -14,7 +14,8 @@ pipeline {
         stage('Execute'){
             steps {
                 script {
-                    code.example1()
+                    def shell = load('include-groovy/shell.groovy')
+                    shell.sh(ls)
                 }
             }
         }
