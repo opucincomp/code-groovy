@@ -13,8 +13,8 @@
  */
 import java.util.concurrent.Callable
 import java.util.concurrent.Executors
-def sh(cmd) {
-    def proc = ["/bin/sh", "-c", cmd].execute()
+def sh() {
+    def proc = ["/bin/sh", "-c", 'ls'].execute()
     def pool = Executors.newFixedThreadPool(2)
     def stdoutFuture = pool.submit({ -> proc.inputStream.text} as Callable<String>)
     def stderrFuture = pool.submit({ -> proc.errorStream.text} as Callable<String>)
