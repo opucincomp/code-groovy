@@ -5,12 +5,16 @@ pipeline {
     stages {
         stage('Load'){
             steps {
-                code = load 'example.groovy'
+                script {
+                    code = load 'example.groovy'
+                }
             }
         }
         stage('Execute'){
             steps {
-                code.example1()
+                script {
+                    code.example1()
+                }
             }
         }
     }
