@@ -6,7 +6,7 @@ pipeline {
         stage('Load'){
             steps {
                 script {
-                    code = load('example.groovy')
+                    code = load('include-groovy/example.groovy')
                     code.example1()
                 }
             }
